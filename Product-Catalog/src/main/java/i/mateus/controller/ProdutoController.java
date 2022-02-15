@@ -85,10 +85,10 @@ public class ProdutoController {
 	 * @return
 	 * Irá retornar o endereço da página que será encaminhado
 	 */
-	@GetMapping(value = "/{id}")
-	public String getById(@PathVariable("id") long id, @RequestParam(required=false) boolean isEdit, Model model) {
+	@GetMapping(value = "/{codProduto}")
+	public String getById(@PathVariable("codProduto") long codProduto, @RequestParam(required=false) boolean isEdit, Model model) {
 
-		model.addAttribute("produtoModel", produtoRepository.findById(id).get());
+		model.addAttribute("produtoModel", produtoRepository.findById(codProduto).get());
 		
 		if(isEdit) {
 			model.addAttribute("categorias", categoriaRepository.findAll());
@@ -175,10 +175,10 @@ public class ProdutoController {
 	 * @return
 	 * Irá retornar o endereço da página que será encaminhado
 	 */
-	@DeleteMapping("/{id}")
-	public String deleteProduct(@PathVariable("id") long id, RedirectAttributes redirectAttributes) {
+	@DeleteMapping("/{codProduto}")
+	public String deleteProduct(@PathVariable("codProduto") long codProduto, RedirectAttributes redirectAttributes) {
 		
-		produtoRepository.deleteById(id);
+		produtoRepository.deleteById(codProduto);
 		redirectAttributes.addFlashAttribute("mensagemProduto", "Produto excluído com sucesso");
 		return "redirect:/produto";
 	}

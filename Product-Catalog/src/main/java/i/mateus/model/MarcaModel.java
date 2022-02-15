@@ -9,48 +9,29 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Table(name = "TB_MARCA")
-public class MarcaModel {
-	
-	private long codMarca;
-	private String nomeMarca;
-	
-	
-	public MarcaModel(long codMarca, String nomeMarca) {
-		super();
-		this.codMarca = codMarca;
-		this.nomeMarca = nomeMarca;
-	}
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-	public MarcaModel() {
-		// TODO Auto-generated constructor stub
-	}
+@Entity
+@Table(name = "MARCA_TB")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@ToString
+public class MarcaModel {
 
 	@Id
 	@Column(name = "COD_MARCA")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_MARCA")
 	@SequenceGenerator(name = "SEQ_MARCA", initialValue = 1, allocationSize = 1)
-	public long getCodMarca() {
-		return codMarca;
-	}
-
-	public void setCodMarca(long codMarca) {
-		this.codMarca = codMarca;
-	}
+	private long codMarca;
 
 	@Column(name = "NOME_MARCA")
 	@NotNull(message = "Nome obrigatório")
-	public String getNomeMarca() {
-		return nomeMarca;
-	}
+	private String nomeMarca;
 
-	public void setNomeMarca(String nomeMarca) {
-		this.nomeMarca = nomeMarca;
-	}
-
-	@Override
-	public String toString() {
-		return "MarcaModel [codMarca=" + codMarca + ", nomeMarca=" + nomeMarca + "]";
-	}
 }
