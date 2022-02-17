@@ -55,7 +55,7 @@ public class MarcaController {
 			model.addAttribute("marcas", marcaRepository.findAll());	
 		}
 		
-		return MARCA_PATH + (isNew ? "marca-novo" : "marcas");
+		return MARCA_PATH + (isNew ? "marca-nova" : "marcas");
 	}
 	
 	/**
@@ -105,7 +105,7 @@ public class MarcaController {
 			marcaRepository.save(marcaModel);
 			return "redirect:/marca";
 		} else {
-			return MARCA_PATH + "marca-novo";
+			return MARCA_PATH + "marca-nova";
 		}
 	}
 

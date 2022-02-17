@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Cadastrar Produto</title>
+	<title>Cadastrar Produto</title>
     <c:set value="${pageContext.request.contextPath}" var="contextPath"/>
 </head>
 <body>

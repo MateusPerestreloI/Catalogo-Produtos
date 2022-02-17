@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +37,7 @@
 		</div>
 		<hr>
 						
-		<a class="btn btn-default btn-lg" href="${contextPath}/produto">Voltar</a>
+		<a href="${contextPath}/produto">Voltar</a>
                             
         <br>
         <br>	

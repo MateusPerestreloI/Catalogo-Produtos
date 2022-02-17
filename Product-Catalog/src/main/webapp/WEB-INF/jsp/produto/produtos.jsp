@@ -10,6 +10,15 @@
     <c:set value="${pageContext.request.contextPath}" var="contextPath"/>
 </head>
 <body>
+
+    <nav role="navigation">
+        <div>
+            <div>
+            	<jsp:include page="../menu.jsp" />
+            </div>
+        </div>
+    </nav>
+
 	<div>
 		<p>
 			<a href="${contextPath}/produto?isNew=true">Novo Produto</a>

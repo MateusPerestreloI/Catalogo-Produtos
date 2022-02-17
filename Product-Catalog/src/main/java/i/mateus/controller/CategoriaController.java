@@ -54,7 +54,7 @@ public class CategoriaController{
 			model.addAttribute("categorias", categoriaRepository.findAll());	
 		}
 		
-		return CATEGORIA_PATH + (isNew ? "categoria-novo" : "categorias");
+		return CATEGORIA_PATH + (isNew ? "categoria-nova" : "categorias");
 	}
 	
 	/**
@@ -103,7 +103,7 @@ public class CategoriaController{
 			categoriaRepository.save(categoriaModel);
 			return "redirect:/categoria";
 		} else {
-			return CATEGORIA_PATH + "categoria-novo";
+			return CATEGORIA_PATH + "categoria-nova";
 		}
 	}
 	

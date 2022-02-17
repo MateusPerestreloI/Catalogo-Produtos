@@ -8,8 +8,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Alterar produto</title>
-  <c:set value="${pageContext.request.contextPath}" var="contextPath"/>
+	<title>Alterar produto</title>
+	<c:set value="${pageContext.request.contextPath}" var="contextPath"/>
 </head>
 <body>
 	<form:form modelAttribute="produtoModel" action="${contextPath}/produto" method="put">
